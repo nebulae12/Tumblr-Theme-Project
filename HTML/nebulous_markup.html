@@ -4,8 +4,8 @@
         <link rel="shortcut icon" href="{Favicon}">
         <link rel="alternate" type="application/rss+xml" href="{RSS}">
 
-        <!-- Links to External Stylesheets
-          These files have been uploaded to tumblr as Theme Assets -->
+        <!-- EXTERNAL STYLESHEETS -------------------------------------->
+        <!-- These files have been uploaded to tumblr as Theme Assets -->
         <link rel="stylesheet" href="http://static.tumblr.com/wevwshx/awyot42nw/normalize.css">
         <link rel="stylesheet" href="http://static.tumblr.com/wevwshx/IZiot44u7/nebulous_styles.css">
 
@@ -103,7 +103,8 @@
                 {/block:Video}
                 {block:Audio}
                     <div class="post audio">
-                        {AudioEmbed}{block:Caption}
+                        {AudioEmbed-250}
+                        {block:Caption}
                             <div class="caption">{Caption}</div>
                         {/block:Caption}
                     </div>

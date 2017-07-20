@@ -4,20 +4,21 @@ body {
 	margin: 0px;
 	margin-bottom: 0px;
 	padding: 0px;
+
+
 }
 
 #posts {
   margin: 0 auto;
   width: 100%;
   max-width: 640px;
-  background-color: black;
 }
 
 .post {
   color: #333;
   background-color: rgba(255,255,255,.5);
   width: auto;
-  margin: 40px auto;
+  margin: 25px auto;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
