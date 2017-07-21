@@ -7,23 +7,19 @@
         <!-- EXTERNAL STYLESHEETS -------------------------------------->
         <!-- These files have been uploaded to tumblr as Theme Assets -->
         <link rel="stylesheet" href="http://static.tumblr.com/wevwshx/awyot42nw/normalize.css">
-        <link rel="stylesheet" href="http://static.tumblr.com/wevwshx/IZiot44u7/nebulous_styles.css">
-
-        {block:Description}
-            <meta name="description" content="{MetaDescription}" />
-        {/block:Description}
+        <link rel="stylesheet" href="http://static.tumblr.com/wevwshx/mCToteuug/nebulous_styles.css">
     </head>
 
-    <header>
-
-    </header>
-
     <body bgcolor="ffd1c7">
-        <h1>{Title}</h1>
-
-        {block:Description}
-            <p id="description">{Description}</p>
-        {/block:Description}
+      <header>
+      	<div class="container">
+      		<img class="avatar" src="{PortraitURL-128}">
+      		<h1><a href="{BlogURL}">{Title}</a></h1>
+      		{block:Description}
+      			<h2>{Description}</h2>
+      		{/block:Description}
+      	</div>
+    	</header>
 
         <div id="posts">
             {block:Posts}
@@ -33,16 +29,28 @@
                             <h3><a href="{Permalink}">{Title}</a></h3>
                         {/block:Title}{Body}
                     </div>
+                    <ul class="like-reblog">
+                      <li class="postDate">{block:Date}<a href="{Permalink}">{12Hour}:{Minutes}{AmPm} on {ShortMonth}. {DayOfMonth}, {Year}</a>{/block:Date}</li>
+                      <li>{LikeButton}</li>
+                      <li>{ReblogButton}</li>
+                      <li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+                    </ul>
                 {/block:Text}
                 {block:Photo}
                     <div class="post photo">
                         <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
-
                         {block:Caption}
                             <div class="caption">{Caption}</div>
                         {/block:Caption}
                     </div>
+                    <ul class="like-reblog">
+                      <li class="postDate">{block:Date}<a href="{Permalink}">{12Hour}:{Minutes}{AmPm} on {ShortMonth}. {DayOfMonth}, {Year}</a>{/block:Date}</li>
+                      <li>{LikeButton}</li>
+                      <li>{ReblogButton}</li>
+                      <li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+                    </ul>
                 {/block:Photo}
+
                 {block:Panorama}
                     <div class="post panorama">
                         {LinkOpenTag}
@@ -52,6 +60,7 @@
                         {/block:Caption}
                     </div>
                 {/block:Panorama}
+
                 {block:Photoset}
                     <div class="post photoset">
                         {Photoset-500}{block:Caption}
@@ -59,30 +68,42 @@
                         {/block:Caption}
                     </div>
                 {/block:Photoset}
+
                 {block:Quote}
                     <div class="post quote">
                         "{Quote}"
-
                         {block:Source}
                             <div class="source">{Source}</div>
                         {/block:Source}
                     </div>
+                    <ul class="like-reblog">
+                      <li class="postDate">{block:Date}<a href="{Permalink}">{12Hour}:{Minutes}{AmPm} on {ShortMonth}. {DayOfMonth}, {Year}</a>{/block:Date}</li>
+                      <li>{LikeButton}</li>
+                      <li>{ReblogButton}</li>
+                      <li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+                    </ul>
                 {/block:Quote}
+
                 {block:Link}
                     <div class="post link">
                         <a href="{URL}" class="link" {Target}>{Name}</a>
-
                         {block:Description}
                             <div class="description">{Description}</div>
                         {/block:Description}
                     </div>
+                    <ul class="like-reblog">
+                      <li class="postDate">{block:Date}<a href="{Permalink}">{12Hour}:{Minutes}{AmPm} on {ShortMonth}. {DayOfMonth}, {Year}</a>{/block:Date}</li>
+                      <li>{LikeButton}</li>
+                      <li>{ReblogButton}</li>
+                      <li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+                    </ul>
                 {/block:Link}
+
                 {block:Chat}
                     <div class="post chat">
                         {block:Title}
                             <h3><a href="{Permalink}">{Title}</a></h3>
                         {/block:Title}
-
                         <ul class="chat">
                             {block:Lines}
                                 <li class="{Alt} user_{UserNumber}">
@@ -93,21 +114,48 @@
                             {/block:Lines}
                         </ul>
                     </div>
+                    <ul class="like-reblog">
+                      <li class="postDate">{block:Date}<a href="{Permalink}">{12Hour}:{Minutes}{AmPm} on {ShortMonth}. {DayOfMonth}, {Year}</a>{/block:Date}</li>
+                      <li>{LikeButton}</li>
+                      <li>{ReblogButton}</li>
+                      <li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+                    </ul>
                 {/block:Chat}
+
                 {block:Video}
                     <div class="post video">
                         {Video-500}{block:Caption}
                             <div class="caption">{Caption}</div>
                         {/block:Caption}
                     </div>
+                    <ul class="like-reblog">
+                      <li class="postDate">{block:Date}<a href="{Permalink}">{12Hour}:{Minutes}{AmPm} on {ShortMonth}. {DayOfMonth}, {Year}</a>{/block:Date}</li>
+                      <li>{LikeButton}</li>
+                      <li>{ReblogButton}</li>
+                      <li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+                    </ul>
                 {/block:Video}
+
                 {block:Audio}
                     <div class="post audio">
-                        {AudioEmbed-250}
+                        {block:AudioEmbed}
+                          {AudioEmbed}
+                          {block:AlbumArt}
+                						<div class="album-art">
+                							<img src="{AlbumArtURL}">
+                						</div>
+                          {/block:AlbumArt}
+                        {/block:AudioEmbed}
                         {block:Caption}
                             <div class="caption">{Caption}</div>
                         {/block:Caption}
                     </div>
+                    <ul class="like-reblog">
+                      <li class="postDate">{block:Date}<a href="{Permalink}">{12Hour}:{Minutes}{AmPm} on {ShortMonth}. {DayOfMonth}, {Year}</a>{/block:Date}</li>
+                      <li>{LikeButton}</li>
+                      <li>{ReblogButton}</li>
+                      <li>{block:NoteCount}<a href="{Permalink}#notes">{NoteCountWithLabel}</a>{/block:NoteCount}</li>
+                    </ul>
                 {/block:Audio}
             {/block:Posts}
         </div>
@@ -115,7 +163,9 @@
         <p id="footer">
             {block:PreviousPage}
                 <a href="{PreviousPage}">&#171; Previous</a>
-            {/block:PreviousPage}{block:NextPage}
+            {/block:PreviousPage}
+
+            {block:NextPage}
                 <a href="{NextPage}">Next &#187;</a>
             {/block:NextPage}
 
