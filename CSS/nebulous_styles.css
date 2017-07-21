@@ -4,8 +4,28 @@ body {
 	margin: 0px;
 	margin-bottom: 0px;
 	padding: 0px;
+	font-family: helvetica, sans-serif;
+}
 
+header {
+	background: #333 url('http://static.tumblr.com/wevwshx/Kegotethm/veil_nebula.jpg'); no-repeat center / cover;
+	color: #fff;
+}
 
+header a {
+	text-decoration: none;
+	color: #fff;
+}
+
+header a:visited {
+	color: #fff;
+}
+
+.container {
+	max-width: 640px;
+	margin: 0 auto;
+	padding: 50px 0;
+	text-align: center;
 }
 
 #posts {
@@ -18,7 +38,13 @@ body {
   color: #333;
   background-color: rgba(255,255,255,.5);
   width: auto;
-  margin: 25px auto;
-  padding: 20px;
+  margin: 20px auto;
+  padding: 25px;
   border-radius: 15px;
+}
+
+.like-reblog {
+	margin-top: -20px;
+	list-style-type: none;
+	display: block;
 }
