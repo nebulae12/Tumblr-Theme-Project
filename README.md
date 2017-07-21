@@ -9,7 +9,7 @@ The Tumblr documentation for creating a theme is located here: https://www.tumbl
 
 Please note the html (nebulous_markup.html) cannot display anything without being hooked up to a Tumblr blog.
 
-Try grading this by visiting nebulae12.tumblr.com . Let me know if you need to get on the user's side, and I can get you the login and password. You may want this to understand the "theme assets" which to Tumblr are all the files that are NOT the html file, including the header image, scroll back up button image, external CSS stylesheet, and JS file. Thanks!
+Try grading this by visiting http://nebulae12.tumblr.com. Let me know if you need to get on the user's side, and I can get you the login and password. You may want this to understand the "theme assets" which to Tumblr are all the files that are NOT the html file, including the header image, scroll back up button image, external CSS stylesheet, and JS file. Thanks!
 
 RESPONSIVITY - See the CSS file (nebulous_styles.css) for one media query and styling.
 
