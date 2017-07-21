@@ -1,15 +1,22 @@
-/*** Custom CSS ***/
-
+/*** Some Global Styles ***/
+/**************************/
 body {
-	margin: 0px;
-	margin-bottom: 0px;
-	padding: 0px;
-	font-family: helvetica, sans-serif;
+	font-family: sans-serif;
+	background-color: #ffd1c7;
 }
 
+a {
+	text-decoration: none;
+	font-style: bold;
+	color: #5c2323;
+}
+
+/*** Header Styles ***/
+/*********************/
 header {
-	background: #333 url('http://static.tumblr.com/wevwshx/Kegotethm/veil_nebula.jpg'); no-repeat center / cover;
+	background: #333 url("http://static.tumblr.com/wevwshx/lF8otf9ru/veil_nebula.jpg"); no-repeat center / cover;
 	color: #fff;
+	font-family: serif;
 }
 
 header a {
@@ -21,6 +28,20 @@ header a:visited {
 	color: #fff;
 }
 
+header .avatar {
+	border: 4px solid #ffd1c7;
+	border-radius: 64px;
+}
+
+header h1 {
+	margin-bottom: 0;
+}
+
+header h2 {
+	font-style: italic;
+	margin-top: 0;
+}
+
 .container {
 	max-width: 640px;
 	margin: 0 auto;
@@ -28,6 +49,8 @@ header a:visited {
 	text-align: center;
 }
 
+/*** Styles for the #posts Container and All Posts ***/
+/*****************************************************/
 #posts {
   margin: 0 auto;
   width: 100%;
@@ -36,15 +59,76 @@ header a:visited {
 
 .post {
   color: #333;
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(255,255,255,.7);
   width: auto;
-  margin: 20px auto;
-  padding: 25px;
+  margin: 40px auto;
+  padding: 20px 25px 55px 25px;
   border-radius: 15px;
 }
 
 .like-reblog {
-	margin-top: -20px;
+	margin: 0 auto;
+	margin-top: -75px;
 	list-style-type: none;
-	display: block;
+	display: flex;
+	max-width: 590px;
+}
+
+.like-reblog li {
+	padding: 0 10px;
+}
+
+.like-reblog a {
+	font-style: normal;
+	font-size: .8rem;
+	font-family: serif;
+}
+
+.postDate {
+	margin-right: auto;
+}
+
+.tags {
+	text-align: center;
+	font-family: serif;
+	font-size: .8rem;
+	font-style: italic;
+	padding: 16px;
+}
+
+/*** Styles for Specific Post Types ***/
+/**************************************/
+.chat ul {
+	list-style: none;
+}
+
+.chat li {
+	padding: 10px;
+}
+
+.chat li:nth-child(odd) {
+	background-color: white;
+}
+
+.chat li:nth-child(even) {
+	background-color: #edd;
+}
+
+/*** Footer Styles ***/
+/*********************/
+#footer {
+	text-align: center;
+	margin: 50px auto;
+}
+
+#footer a {
+	padding: 0 25px;
+}
+
+/*** Media Queries ***/
+/*********************/
+@media (max-width: 640px) {
+	#posts {
+		width: 90%;
+	}
 }
