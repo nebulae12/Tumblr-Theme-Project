@@ -14,7 +14,7 @@ a {
 /*** Header Styles ***/
 /*********************/
 header {
-	background: #333 url("http://static.tumblr.com/wevwshx/lF8otf9ru/veil_nebula.jpg") no-repeat center / cover;
+	background: #333 url("{HeaderImage}") /* http://static.tumblr.com/wevwshx/lF8otf9ru/veil_nebula.jpg */ no-repeat center / cover;
 	color: #fff;
 	font-family: serif;
 }
@@ -29,7 +29,7 @@ header a:visited {
 }
 
 header .avatar {
-	border: 4px solid #ffd1c7;
+	border: 4px solid {BackgroundColor}; /* #ffd1c7 */
 	border-radius: 64px;
 }
 
